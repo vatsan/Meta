@@ -11,7 +11,7 @@ import sys
 from meta.bytecodetools.disassembler_ import disassembler
 import opcode
 
-py3 = sys.version_info.major and sys.version_info.major >= 3
+py3 = hasattr(sys.version_info,'major') and sys.version_info.major >= 3
 
 co_ord = (lambda c:c) if py3 else ord
 
